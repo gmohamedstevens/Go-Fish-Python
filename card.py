@@ -1,9 +1,12 @@
 # Defines a card class
 class Card(object):
-    
+
     SUIT_NAMES = ["Clubs", "Hearts", "Diamonds", "Spades"]
     VALUE_NAMES =["Ace", "2", "3", "4", "5",
     "6", "7", "8", "9", "10", "Jack", "Queen", "King"]
+
+    SUIT_DICT = {key:value for value, key in enumerate(SUIT_NAMES)}
+    VALUE_DICT = {key:value for value, key in enumerate(VALUE_NAMES)}
 
     def __init__(self, suit, value):
         self.suit = suit
@@ -14,6 +17,6 @@ class Card(object):
 
     def get_value_int(self):
         return self.value
-    
+
     def get_suit_int(self):
         return self.suit
